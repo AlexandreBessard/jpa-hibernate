@@ -1,11 +1,8 @@
-package guru.springframework.controllers;
+package jpa.hibernate.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- * Created by jt on 6/1/17.
- */
 @Controller
 public class IndexController {
 
@@ -13,5 +10,5 @@ public class IndexController {
     public String getIndexPage(){
         return "index";
     }
-    //Test1
+
 }
