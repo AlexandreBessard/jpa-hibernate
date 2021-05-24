@@ -18,6 +18,10 @@ public class Recipe {
     private String description, source, url, directions;
     private Integer prepTime, cookTime, servings;
 
+    //One Recipe can have multiple ingredients
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
+    private Set<Ingredient> ingredients;
+
     @Lob
     private Byte[] image;
 
