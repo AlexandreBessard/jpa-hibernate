@@ -42,4 +42,16 @@ public class Recipe {
     @Enumerated(value = EnumType.STRING) //Ordinal is default value (1, 2, 3): EASY, MODERATE, HARD  / STRING
     private Difficulty difficulty;
 
+
+    public void setNotes(Notes notes) {
+        this.notes = notes;
+        notes.setRecipe(this);
+    }
+
+    public Recipe addIngredient(Ingredient ingredient) {
+        ingredient.setRecipe(this);
+        this.ingredients.add(ingredient);
+        return this;
+    }
+
 }
